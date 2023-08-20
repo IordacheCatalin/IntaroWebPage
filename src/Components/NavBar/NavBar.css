@@ -1,0 +1,70 @@
+.nav-link {
+  font-size: 24px !important;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link:checked,
+.nav-link:visited {
+  color: rgb(255, 255, 255) !important;
+}
+.navbar {
+  height: 80px !important;
+  padding: 0px;
+  background-image: url("../../Assets//Navbar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.navbar-toggler {
+  width: 100%;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  margin: 0px 5px;
+  text-align: right;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.LogoMobile {
+  width: 100px !important;
+  float: left !important;
+  padding-top: 5px;
+}
+
+.languageLabel {
+  font-size: 24px;
+  font: 400;
+  color: #fff;
+}
+
+.languageLabel [type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+.languageLabel input[type="radio"] {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+input[type="radio"]:checked + .languageLabel {
+  font-weight: 600;
+}
+.navbar-toggler .LogoMobile {
+  display: none;
+}
+.navbar-toggler.collapsed .LogoMobile {
+  display: block;
+}

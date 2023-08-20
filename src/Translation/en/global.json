@@ -1,0 +1,54 @@
+{
+  "Home": {
+    "Text01": "A Tradition of Excellence in Insurance Services and MGA structure",
+    "Text02": "Advanced Insurance Solutions :",
+    
+    "Text03": "Underwriting",
+    "Text04": "Robust systems to assess and manage risks.",
+    "Text05": "Portfolio Management",
+    "Text06": "Comprehensive tools for tracking and assessing our policy portfolio.",
+    "Text07": "Customer Relationship Management",
+    "Text08": "Building trust and understanding with our clients at every step.",
+    "Text09": "Sales Management",
+    "Text10": "Efficient tools and processes for seamless policy sales.",
+    "Text11": "Claims Processing",
+    "Text12": "Quick and fair evaluations and settlements.",
+    "Text13": "Connection with Insurance Distributors",
+    "Text14": "Collaborative work with distributors for expansive coverage.",
+    
+    "Text15": "Nationwide Claims Assessor Services",
+    "Text16": "Our skilled team of assessors is spread across Romania, ready to assist clients with prompt and precise evaluations.",
+    "Text17": "Extensive Car Repair Network",
+    "Text18": "Wherever you are in Romania, our repair network ensures your vehicle gets timely and top-notch service.",
+    "Text19": "Actuarial services",
+    "Text20": "Mixing traditional actuarial practices with the insights provided by modern machine learning, ensuring transparency and fairness.",
+
+    "Text21": "Compliance and Reporting",
+    "Text22": "Regulatory Adherence:",
+    "Text23": " Following all industry regulations. ",
+    "Text24": "GAAP Insurance Accounting:",
+    "Text25": " Upholding the highest standards in financial reporting as per local guidelines.",
+    "Text26": "The Intaro Team",
+    "Text27": "Comprising the highest professionals in the insurance sector, our team brings unparalleled expertise, passion, and commitment to every service we offer. From our front desk to our board room, each member is dedicated to uphol- ding the standards of excellence that Intaro is known for."
+  },
+  "Contact": {
+    "Text01": "Complete the form below to get in touch with us!",
+    "Text02": "first name",
+    
+    "Text03": "last name",
+    "Text04": "e-mail",
+    "Text05": "phone number",
+    "Text06": "subject",
+    "Text07": "message",
+    "Text08": "send",
+
+    "Text09": "Customer service",
+    "Text10": "Call Center:",
+    "Text11": "Hours: M-F 8:00 - 20:00",
+    "Text12": "Claims",
+    "Text13": "Human Resources",
+    "Text14": "Headquarters:",
+    "Text15": "Registered Office"
+  }
+
+}

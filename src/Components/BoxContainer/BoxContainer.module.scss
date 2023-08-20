@@ -1,0 +1,56 @@
+.Container {
+  min-width: 100%;
+  padding: 20px;
+  background: rgba(145, 192, 207, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.Contain {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.InfoBoxTitle{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0px 20px 40px 20px;
+}
+
+.InfoBoxContainer{
+  display: flex;
+  gap:30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.partenerContainer{
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.parternerText{
+  display: flex;
+  align-items: flex-end;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.partenerContainer img{
+  width: 200px;
+}
+
+@media only screen and (max-width: 570px) {
+  .partenerContainer img{
+    width: 100px;
+  }
+  .parternerText{
+    font-size: 20px;
+    padding-left: 40px;
+  }
+}

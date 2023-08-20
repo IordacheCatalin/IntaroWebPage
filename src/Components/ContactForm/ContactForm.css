@@ -1,0 +1,88 @@
+.container h2 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+input.custom-input,  select.custom-input , textarea.custom-input{
+  border: none;
+  outline: none;
+  background-color: black;
+  border-radius: 0px;
+  color: #ffffff !important;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 2px solid #ffffff98;
+  padding-left: 0px;
+  transition: ease-in-out 0.3s; 
+}
+
+input:hover.custom-input, select:hover.custom-input ,textarea:hover.custom-input {
+  border-bottom: 2px solid #ffffff;
+}
+
+input:focus.custom-input,  select:focus.custom-input ,textarea:focus.custom-input{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: black;
+  border-bottom: 2px solid #ffffff;
+}
+
+.custom-input::placeholder {
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.custom-input:hover::placeholder {
+  font-weight: 500;
+  opacity: 1;
+}
+
+.navbar {
+ background-color: black!important;
+ background-image: none!;
+  }
+
+  .custom-btn{
+    width: 125px;
+    height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #F3C855 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    border: none;
+    transition: ease-in-out 0.3s; 
+    margin-top: 20px;
+  }
+
+  .custom-btn:hover{
+    background: #ffffff 0% 0% no-repeat padding-box;
+  }
+
+  .custom-btn:focus{
+    background: #9e7400 0% 0% no-repeat padding-box;
+  }
+  .custom-error{
+    padding-top: 10px;
+    color: red;
+    font-size: 12px;
+  }
+
+  .custom-error:focus{
+    box-shadow: none;
+  }
+
+  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus{
+    box-shadow: none;
+  }
+
+  @media only screen and (max-width: 575px) {
+    .custom-btn{
+      width: 100%;
+    }
+  }

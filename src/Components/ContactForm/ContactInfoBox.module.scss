@@ -1,0 +1,76 @@
+.Container{
+    padding-top: 45px;
+    width: 100%;
+    height: 100%;
+}
+
+.Title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom:30px;
+    color: #fff;
+}
+
+.textGroup{
+    margin-bottom: 50px;
+}
+
+.textGroup2{
+    margin-bottom: 80px;
+}
+
+.textGroup3{
+    margin-top: 125px;
+}
+
+.textIconGroup{
+    display: flex;
+    align-items: center;
+}
+
+.text{
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    margin-left: 15px;
+}
+
+p.text{
+    margin-left: 0px;
+}
+
+.textBold{
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 570px) {
+    .Title, .text {
+       text-align: center;
+    }
+    .textGroup, .textIconGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textGroup3{
+        margin-bottom: 125px;
+    }
+  }
+
+  @media only screen and (max-width: 549px) {
+    .textGroup{
+        margin-bottom: 10px;
+    }
+    
+    .textGroup2{
+        margin-bottom: 20px;
+    }
+    
+    .textGroup3{
+        margin-top: 20px;
+    }
+  }
