@@ -50,3 +50,27 @@ code {
     width: 0;
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-image: url("../src/Assets/backgroundSmallMonitor.jpg");
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-image: url("../src/Assets/backgroundVerrySmallMonitor.jpg");
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("../src/Assets/backgroundTablet2.jpg");
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  body {
+    background-image: url("../src/Assets/backgroundMobile2.jpg");
+  }
+}

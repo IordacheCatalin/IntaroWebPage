@@ -13,7 +13,7 @@
 .navbar {
   height: 80px !important;
   padding: 0px;
-  background-image: url("../../Assets//Navbar.jpg");
+  background-image: url("../../Assets/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -67,4 +67,28 @@ input[type="radio"]:checked + .languageLabel {
 }
 .navbar-toggler.collapsed .LogoMobile {
   display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    background-image: url("../../Assets/backgroundSmallMonitor.jpg"); 
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    background-image: url("../../Assets/backgroundVerrySmallMonitor.jpg"); 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-image: url("../../Assets/backgroundTablet2.jpg"); 
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .navbar {
+    background-image: url("../../Assets/backgroundMobile2.jpg"); 
+  }
 }

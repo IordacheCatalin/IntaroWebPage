@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container-fluid text-center text-md-left">
         <div className="footerContent">
           <div className="logo">
-            <Logo width="120px" height="auto"/>
+            <Logo className="logo-svg"/>
           </div>
           
           <h6 className="footer-text">© 2023 Intaro Insurance. All rights reserved.</h6>
