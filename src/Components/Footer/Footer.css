@@ -1,9 +1,31 @@
-.page-footer{
+.page-footer {
   background-color: black;
   height: 48px;
-  padding: 15px;
+  padding: 10px 100px;
 }
 
 .footer-text {
-  color:white;
+  color: white;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerContent h6 {
+  margin: 0px;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 570px) {
+  .page-footer {
+    padding: 10px 5px;
+  }
+
+  .footerContent h6 {
+    margin: 0px;
+    font-size: 12px;
+  }
 }

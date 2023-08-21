@@ -6,8 +6,12 @@ const Footer = () => {
   return (
     <footer className="page-footer fixed-bottom">
       <div className="container-fluid text-center text-md-left">
-        <div className="col-md-12 text-start">
-          <h6 className="footer-text">© 2022 Newto. All rights reserved.</h6>
+        <div className="footerContent">
+          <div className="logo">
+            <Logo width="120px" height="auto"/>
+          </div>
+          
+          <h6 className="footer-text">© 2023 Intaro Insurance. All rights reserved.</h6>
         </div>
       </div>
     </footer>
