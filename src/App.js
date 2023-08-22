@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter  as Router, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import Contact from "../src/Pages/Contact/Contact.js";
