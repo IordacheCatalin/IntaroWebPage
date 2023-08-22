@@ -5,7 +5,7 @@ import ContactComponent from "../../Components/Contact/ContactComponent.js";
 const Contact = () => {
   return (
     <div className={Styles.contactContainer}>
-      <ContactComponent />
+      <ContactComponent />      
     </div>
   );
 };

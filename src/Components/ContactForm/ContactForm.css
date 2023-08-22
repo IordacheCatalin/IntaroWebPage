@@ -81,7 +81,7 @@ input:focus.custom-input,  select:focus.custom-input ,textarea:focus.custom-inpu
     box-shadow: none;
   }
 
-  @media only screen and (max-width: 575px) {
+  @media only screen and (max-width: 725px) {
     .custom-btn{
       width: 100%;
     }

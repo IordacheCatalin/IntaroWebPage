@@ -4,11 +4,6 @@
     background-color: black!important;
 }
 
-.Space{
-    width: 100%;
-    height: 170px;
-}
-
 .title h1{
     color: #fff;
     font-size: 60px;
@@ -28,27 +23,33 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap:40px
 }
 
 .contactBoxOne{
     display: flex;
     flex: 1.5 ;
-    flex-basis: 300px;
+    flex-basis: 350px;
     max-width: 450px;
 }
 
 .contactBoxTwo, .contactBoxThree{
     flex: 1 ;
     max-width: 270px;
-    flex-basis: 250px;
+    flex-basis: 280px;
 }
 
-@media only screen and (max-width: 570px) {
-    .contactBoxOne{
+@media only screen and (max-width: 860px) {
+    .contactBoxOne, .contactBoxTwo, .contactBoxThree{
        max-width: 100%;
+    } 
+    .Contain{
+        padding: 20px;   
     }
+  }
 
-    .contactBoxTwo, .contactBoxThree{
+@media only screen and (max-width: 570px) {
+    .contactBoxOne, .contactBoxTwo, .contactBoxThree{
        max-width: 100%;
     }
     .boxContain{
