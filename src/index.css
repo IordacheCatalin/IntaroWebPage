@@ -8,8 +8,9 @@ body {
   background-image: url("../src/Assets/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100%;
 }
 html {
   scroll-behavior: smooth !important;

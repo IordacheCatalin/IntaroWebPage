@@ -7,6 +7,7 @@ import ContactInfoBox2 from "../../Components/ContactForm/ContactInfoBox2.js";
 const Contact = () => {
   return (
     <>
+    <div className={Styles.Space}></div>
       <div className={Styles.Container}>
         <div className={Styles.Contain}>
           <div className={Styles.title}>
