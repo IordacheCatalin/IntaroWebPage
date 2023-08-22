@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Nav, Navbar, NavLink } from "react-bootstrap";
 import style from "../../Components/NavBar/NavBar.module.scss";
 import "./NavBar.css";
@@ -8,6 +8,13 @@ import { useTranslation } from "react-i18next";
 
 import { ReactComponent as Logo } from "../../Assets/IntaroLogo.svg";
 import logoMobile from "../../Assets/IntaroLogo.svg";
+
+import Background from "../../Assets/background.jpg";
+import BackgroundTablet from "../../Assets/backgroundTablet.jpg";
+import BackgroundMobile from "../../Assets/backgroundMobile.jpg";
+import BackgroundMobileSmall from "../../Assets/backgroundMobileSmall.jpg";
+import BackgroundSmallMonitor from "../../Assets/backgroundSmallMonitor.jpg";
+import BackgroundVerrySmallMonitor from "../../Assets/backgroundVerrySmallMonitor.jpg";
 
 const NavBarMenu = () => {
   const logoMobileRef = useRef(null);
@@ -49,8 +56,48 @@ const NavBarMenu = () => {
     i18n.changeLanguage(lang);
   };
 
+  const [backgroundImage, setBackgroundImage] = useState(Background);
+
+  // Update the background image based on screen width
+  const updateBackgroundImage = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 410) {
+      setBackgroundImage(BackgroundMobileSmall);
+    } else if (screenWidth <= 570) {
+      setBackgroundImage(BackgroundMobile);
+    } else if (screenWidth <= 768) {
+      setBackgroundImage(BackgroundTablet);
+    } else if (screenWidth <= 1000) {
+      setBackgroundImage(BackgroundVerrySmallMonitor);
+    } else if (screenWidth <= 1200) {
+      setBackgroundImage(BackgroundSmallMonitor);
+    } else {
+      setBackgroundImage(Background);
+    }
+  };
+
+  // Attach the event listener when the component mounts
+  useEffect(() => {
+    updateBackgroundImage(); // Initial call to set background based on screen size
+    window.addEventListener("resize", updateBackgroundImage);
+
+    // Cleanup: Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", updateBackgroundImage);
+    };
+  }, []);
+
   return (
     <Navbar collapseOnSelect expand="sm" variant="dark" className="fixed-top">
+      <div className={style.fixedBackgroundContainer}>
+      <img
+        src={backgroundImage}
+        alt="background"
+        className={style.fixedBackground}
+      />
+      </div>
+    
       <Navbar.Toggle
         aria-controls="navbarScroll"
         data-bs-toggle="collapse"
@@ -78,7 +125,6 @@ const NavBarMenu = () => {
                   type="radio"
                   name="language"
                   value="ro"
-                  defaultChecked
                   onChange={() => handleLanguageChange("ro")}
                 />{" "}
                  <label className="languageLabel">ro</label>
@@ -89,6 +135,7 @@ const NavBarMenu = () => {
                   type="radio"
                   name="language"
                   value="en"
+                  defaultChecked
                   onChange={() => handleLanguageChange("en")}
                 />{" "}
                 <label className="languageLabel">en</label>

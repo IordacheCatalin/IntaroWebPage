@@ -13,10 +13,7 @@
 .navbar {
   height: 80px !important;
   padding: 0px;
-  background-image: url("../../Assets/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: transparent!important;
 }
 .navbar-toggler {
   width: 100%;
@@ -70,7 +67,7 @@ input[type="radio"]:checked + .languageLabel {
   display: block;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .navbar {
     background-image: url("../../Assets/backgroundSmallMonitor.jpg"); 
   }
@@ -92,4 +89,4 @@ input[type="radio"]:checked + .languageLabel {
   .navbar {
     background-image: url("../../Assets/backgroundMobile2.jpg"); 
   }
-}
+} */

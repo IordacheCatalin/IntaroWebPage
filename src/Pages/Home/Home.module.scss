@@ -8,27 +8,40 @@
     margin: 0 auto;
 }
 
+.fixedBackground{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    min-height: 100vh;
+  }
+
 .HomeText{
     font-size: 32px;
     font-weight: 300;
     max-width: 460px;
     padding-left: 50px;
+    line-height: 1.1;
 }
 
 
 .BoxOne{
  position: relative;
- top:100px;
+ top:110px;
 }
 
 .BoxTwo{
     position: relative;
-    top:350px;
+    top:360px;
 }
 
 .BoxThree{
     position: relative;
-    top:225px;  
+    top:265px;  
+}
+
+.BoxFour{
+    position: relative;
+    top:405px;  
 }
 
 @media only screen and (max-width: 570px) {
