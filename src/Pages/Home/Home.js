@@ -25,7 +25,7 @@ const Home = () => {
         <div style={{ height: "200px", width: "100%" }}></div>
       </div>
 
-      <div className={Styles.BoxTwo}>
+      <div className={Styles.BoxThree}>
         <Contact />
       </div>
     </div>

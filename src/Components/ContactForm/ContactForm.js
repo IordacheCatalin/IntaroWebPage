@@ -83,16 +83,16 @@ const ContactForm = () => {
 
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-3">
     <h2>{t("Contact.Text01")}</h2>
     <form onSubmit={handleSubmit} noValidate>
-      <div className="mb-1">
-        <label htmlFor="firstName" className="form-label">
+      <div className="">
+        {/* <label htmlFor="firstName" className="form-label">
          
-        </label>
+        </label> */}
         <input
           type="text"
-          className={`form-control custom-input ${errors.firstName && "is-invalid"}`}
+          className={`form-control custom-input mt-3 ${errors.firstName && "is-invalid"}`}
           id="firstName"
           name="firstName"
           value={formData.firstName}
@@ -101,13 +101,13 @@ const ContactForm = () => {
         />
         {errors.firstName && <div className="custom-error">{errors.firstName}</div>}
       </div>
-      <div className="mb-1">
-        <label htmlFor="lastName" className="form-label">
+      <div className="">
+        {/* <label htmlFor="lastName" className="form-label">
          
-        </label>
+        </label> */}
         <input
           type="text"
-          className={`form-control custom-input ${errors.lastName && "is-invalid"}`}
+          className={`form-control custom-input mt-3 ${errors.lastName && "is-invalid"}`}
           id="lastName"
           name="lastName"
           value={formData.lastName}
@@ -116,13 +116,13 @@ const ContactForm = () => {
         />
         {errors.lastName && <div className="custom-error">{errors.lastName}</div>}
       </div>
-        <div className="mb-1">
-          <label htmlFor="email" className="form-label">
+        <div className="">
+          {/* <label htmlFor="email" className="form-label">
           
-          </label>
+          </label> */}
           <input
             type="email"
-            className={`form-control  custom-input ${errors.email && "is-invalid"}`}
+            className={`form-control  custom-input mt-3 ${errors.email && "is-invalid"}`}
             id="email"
             name="email"
             value={formData.email}
@@ -132,13 +132,13 @@ const ContactForm = () => {
           />
           {errors.email && <div className="custom-error">{errors.email}</div>}
         </div>
-        <div className="mb-1">
-          <label htmlFor="phoneNumber" className="form-label">
+        <div className="">
+          {/* <label htmlFor="phoneNumber" className="form-label">
           
-          </label>
+          </label> */}
           <input
             type="tel"
-            className={`form-control custom-input ${errors.phoneNumber && "is-invalid"}`}
+            className={`form-control custom-input mt-3 ${errors.phoneNumber && "is-invalid"}`}
             id="phoneNumber"
             name="phoneNumber"
             pattern="[0-9]"
@@ -149,12 +149,12 @@ const ContactForm = () => {
           />
           {errors.phoneNumber && <div className="custom-error">{errors.phoneNumber}</div>}
         </div>
-        <div className="mb-1">
-          <label htmlFor="subject" className="form-label">
+        <div className="">
+          {/* <label htmlFor="subject" className="form-label">
             
-          </label>
+          </label> */}
           <select
-            className={`form-select custom-input ${errors.subject && "is-invalid"}`}
+            className={`form-select custom-input mt-3 ${errors.subject && "is-invalid"}`}
             id="subject"
             name="subject"
             value={formData.subject}
@@ -170,12 +170,12 @@ const ContactForm = () => {
           </select>
           {errors.subject && <div className="custom-error">{errors.subject}</div>}
         </div>
-        <div className="mb-1">
-          <label htmlFor="message" className="form-label">
+        <div className="">
+          {/* <label htmlFor="message" className="form-label">
            
-          </label>
+          </label> */}
           <textarea
-            className={`form-control custom-input ${errors.message && "is-invalid"}`}
+            className={`form-control custom-input mt-3 ${errors.message && "is-invalid"}`}
             id="message"
             name="message"
             rows="4"

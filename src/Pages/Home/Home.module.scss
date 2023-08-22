@@ -18,12 +18,17 @@
 
 .BoxOne{
  position: relative;
- top:20vh;
+ top:500px;
 }
 
 .BoxTwo{
     position: relative;
-    top:50vh;
+    top:750px;
+}
+
+.BoxThree{
+    position: relative;
+    top:800px;  
 }
 
 @media only screen and (max-width: 570px) {
