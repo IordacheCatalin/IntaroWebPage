@@ -33,7 +33,6 @@
 }
 
 .InfoBoxContainer.BoxContainer3{
-  align-items: flex-start;
   flex-wrap: nowrap;
 }
 
@@ -65,6 +64,7 @@
   max-width: 500px;
   padding-top: 260px;
 }
+
 .BoxContainer3Text{
 display: flex;
 flex-direction: column;
@@ -85,4 +85,47 @@ gap:20px;
     font-size: 20px;
     margin: 20px 0px 0px 40px;
   }
+}
+
+@media only screen and (max-width: 1200px) {
+.Container.BoxContainer3{
+  padding: 30px;
+}
+.BoxContainer3TextAlign{
+  max-width: 400px;
+  padding-top: 160px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+.Container.BoxContainer3{
+  padding: 10px 30px;
+}
+.BoxContainer3TextAlign{
+  max-width: 400px;
+  padding-top: 60px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+.InfoBoxContainer.BoxContainer3{
+  flex-wrap: wrap;
+}
+
+.BoxContainer3TextAlign{
+  max-width: 600px;
+}
+}
+
+@media only screen and (max-width: 570px) {
+
+.BoxContainer3TextAlign{
+  max-width: 600px;
+}
+.Container.BoxContainer3{
+  padding: 10px;
+}
+.BoxContainer3TextAlign{
+  text-align: center;
+}
 }

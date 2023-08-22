@@ -67,26 +67,9 @@ input[type="radio"]:checked + .languageLabel {
   display: block;
 }
 
-/* @media only screen and (max-width: 1200px) {
-  .navbar {
-    background-image: url("../../Assets/backgroundSmallMonitor.jpg"); 
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .navbar {
-    background-image: url("../../Assets/backgroundVerrySmallMonitor.jpg"); 
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .navbar {
-    background-image: url("../../Assets/backgroundTablet2.jpg"); 
-  }
-}
-
 @media only screen and (max-width: 570px) {
   .navbar {
-    background-image: url("../../Assets/backgroundMobile2.jpg"); 
+    height: 38px !important;
   }
-} */
+}
+
