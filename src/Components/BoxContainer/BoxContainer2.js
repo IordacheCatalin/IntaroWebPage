@@ -22,14 +22,14 @@ const BoxContainer = () => {
             text2={t("Home.Text25")}
             height="150px"
             padding="20px 0px 0px 0px"
-            padding2="0px 0px 0px 0px"
+            padding2="0px 0px 20px 0px"
           />
           <SmallBoxContainer
             title={t("Home.Text19")}
             text={t("Home.Text20")}
             height="150px"
             padding="20px 0px 0px 0px"
-            padding2="0px 0px 0px 0px"
+            padding2="0px 0px 20px 0px"
           />
         </div>
         <div className={Styles.InfoBoxContainer}>
