@@ -1,60 +1,8 @@
-.Container{
-    width: 100%;
-    height: 100%;
-    background-color: black!important;
-}
-
-.Space{
-    width: 100%;
-    height: 170px;
-}
-
-.title h1{
-    color: #fff;
-    font-size: 60px;
-}
-
-.Contain{
+.contactContainer{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: auto; 
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 45px 100px 50px 100px;   
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
 }
-
-.boxContain{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contactBoxOne{
-    display: flex;
-    flex: 1.5 ;
-    flex-basis: 300px;
-    max-width: 450px;
-}
-
-.contactBoxTwo, .contactBoxThree{
-    flex: 1 ;
-    max-width: 270px;
-    flex-basis: 250px;
-}
-
-@media only screen and (max-width: 570px) {
-    .contactBoxOne{
-       max-width: 100%;
-    }
-
-    .contactBoxTwo, .contactBoxThree{
-       max-width: 100%;
-    }
-    .boxContain{
-        justify-content: center;
-    }
-    .Contain{
-        padding: 20px;   
-    }
-  }

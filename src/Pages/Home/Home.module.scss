@@ -36,7 +36,8 @@
 
 .BoxThree{
     position: relative;
-    top:265px;  
+    top:654px;
+    margin-bottom:1000px;
 }
 
 .BoxFour{
@@ -48,5 +49,8 @@
     .HomeText{
         font-size: 24px;
         padding: 0px 20px;
+    }
+    .BoxThree{
+        margin-bottom:700px;
     }
   }

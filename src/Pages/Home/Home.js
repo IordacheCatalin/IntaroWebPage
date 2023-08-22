@@ -4,7 +4,7 @@ import Styles from "./Home.module.scss";
 import BoxContainer from "../../Components/BoxContainer/BoxContainer.js";
 import BoxContainer2 from "../../Components/BoxContainer/BoxContainer2.js";
 import BoxContainer3 from "../../Components/BoxContainer/BoxContainer3.js";
-import Contact from "../Contact/Contact.js";
+import Contact from "../../Components/Contact/ContactComponent.js";
 
 import { useTranslation } from "react-i18next";
 
@@ -78,7 +78,7 @@ const Home = () => {
 
         <div className={Styles.BoxThree}>
           <Contact />
-        </div>
+        </div> 
       </div>
     </>
   );
