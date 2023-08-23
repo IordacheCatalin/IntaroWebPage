@@ -32,24 +32,6 @@ const NavBarMenu = () => {
     }
   }, []);
 
-  //   //Scroll to the notification aria
-  //   const handleContactLinkClick = () => {
-  //     window.scrollTo(0, 2000);
-  //     // Search for the input with class "notificationInput"
-  //     setTimeout(()=>{
-  //       const notificationInput = document.querySelector(".notificationInput");
-
-  //       // Check if the input element is found
-  //       if (notificationInput) {
-  //         // Set focus on the input element
-  //         notificationInput.focus();
-
-  //         // Type some text into the input element
-  //         notificationInput.value = "";
-  //     }
-  //     },500);
-  //   };
-
   const [t, i18n] = useTranslation("global");
 
   const handleLanguageChange = (lang) => {

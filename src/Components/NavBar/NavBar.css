@@ -13,22 +13,26 @@
 .navbar {
   height: 80px !important;
   padding: 0px;
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 .navbar-toggler {
-  width: 100%;
+  width: 40px;
+  margin: 0px 0px 0px auto;
   background: transparent;
   color: rgb(255, 255, 255);
-  margin: 0px 5px;
   text-align: right;
   border: none;
-  z-index: 11;
 }
-
+.navbar-toggler.collapsed{
+  width: 100%;
+  margin: 0px 0px 0px auto;
+}
 .navbar-toggler:focus {
   box-shadow: none;
 }
 .navbar-toggler-icon {
+  position: fixed;
+  right: 20px;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .LogoMobile {
@@ -61,26 +65,30 @@
 input[type="radio"]:checked + .languageLabel {
   font-weight: 600;
 }
+
+.navbar-collapse.collapse.show {
+  position: relative;
+  top: -80px;
+}
+
 .navbar-toggler .LogoMobile {
   opacity: 0;
-  
 }
 .navbar-toggler.collapsed .LogoMobile {
   opacity: 1;
   transition: ease-in-out 2s;
 }
 
-.navbar-collapse{
-  position: relative;
-  top:-80px;
-}
-
 @media only screen and (max-width: 570px) {
   .navbar {
     height: 80px !important;
   }
-  .navbar-toggler{
+  .navbar-toggler {
+    z-index: 11;
     height: 80px !important;
   }
+  .navbar-collapse {
+    position: relative;
+    top: -80px;
+  }
 }
-

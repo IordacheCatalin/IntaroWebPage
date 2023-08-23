@@ -52,12 +52,9 @@
     box-shadow: 0px 0px 20px #00000029;
     backdrop-filter: blur(28px);
     -webkit-backdrop-filter: blur(28px);
+    padding-top: 8px;
   }
   .navLinkRight a {
     margin-right: 0px;
-  }
-
-  .fixedBackgroundContainer{
-   display: none;
   }
 }
