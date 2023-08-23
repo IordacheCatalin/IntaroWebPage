@@ -42,7 +42,7 @@ const BoxContainer = () => {
           />
           <div className={Styles.partenerContainer}>
             <img src={AxeriaLogo} alt="Axeria logo" />
-            <span className={Styles.parternerText}>partener</span>
+            <span className={Styles.parternerText}>{t("Home.Text28")}</span>
           </div>
         </div>
       </div>
