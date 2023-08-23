@@ -22,6 +22,7 @@
   margin: 0px 5px;
   text-align: right;
   border: none;
+  z-index: 11;
 }
 
 .navbar-toggler:focus {
@@ -61,15 +62,25 @@ input[type="radio"]:checked + .languageLabel {
   font-weight: 600;
 }
 .navbar-toggler .LogoMobile {
-  display: none;
+  opacity: 0;
+  
 }
 .navbar-toggler.collapsed .LogoMobile {
-  display: block;
+  opacity: 1;
+  transition: ease-in-out 2s;
+}
+
+.navbar-collapse{
+  position: relative;
+  top:-80px;
 }
 
 @media only screen and (max-width: 570px) {
   .navbar {
-    height: 38px !important;
+    height: 80px !important;
+  }
+  .navbar-toggler{
+    height: 80px !important;
   }
 }
 
