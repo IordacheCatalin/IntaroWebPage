@@ -5,7 +5,9 @@
   margin-bottom: 20px;
 }
 
-input.custom-input,  select.custom-input , textarea.custom-input{
+input.custom-input,
+select.custom-input,
+textarea.custom-input {
   border: none;
   outline: none;
   background-color: black;
@@ -16,14 +18,18 @@ input.custom-input,  select.custom-input , textarea.custom-input{
   font-weight: 500;
   border-bottom: 2px solid #ffffff98;
   padding-left: 0px;
-  transition: ease-in-out 0.3s; 
+  transition: ease-in-out 0.3s;
 }
 
-input:hover.custom-input, select:hover.custom-input ,textarea:hover.custom-input {
+input:hover.custom-input,
+select:hover.custom-input,
+textarea:hover.custom-input {
   border-bottom: 2px solid #ffffff;
 }
 
-input:focus.custom-input,  select:focus.custom-input ,textarea:focus.custom-input{
+input:focus.custom-input,
+select:focus.custom-input,
+textarea:focus.custom-input {
   border: none;
   outline: none;
   box-shadow: none;
@@ -44,45 +50,57 @@ input:focus.custom-input,  select:focus.custom-input ,textarea:focus.custom-inpu
 }
 
 .navbar {
- background-color: black!important;
- background-image: none!;
-  }
+  background-color: black !important;
+  background-image: none!;
+}
 
-  .custom-btn{
-    width: 125px;
-    height: 36px;
-    font-size: 16px;
-    font-weight: 600;
-    background: #F3C855 0% 0% no-repeat padding-box;
-    border-radius: 3px;
-    border: none;
-    transition: ease-in-out 0.3s; 
-    margin-top: 20px;
-    color: #000000;
-  }
+.custom-btn {
+  width: 125px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #f3c855 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  border: none;
+  transition: ease-in-out 0.3s;
+  margin-top: 20px;
+  color: #000000;
+}
 
-  .custom-btn:hover{
-    background: #ffffff 0% 0% no-repeat padding-box;
-  }
+.custom-btn:hover {
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
 
-  .custom-btn:focus{
-    background: #9e7400 0% 0% no-repeat padding-box;
-  }
-  .custom-error{
-    color: red;
-    font-size: 12px;
-  }
+.custom-btn:focus {
+  background: #9e7400 0% 0% no-repeat padding-box;
+}
+.custom-error {
+  color: red;
+  font-size: 12px;
+}
 
-  .custom-error:focus{
-    box-shadow: none;
-  }
+.custom-error:focus {
+  box-shadow: none;
+}
 
-  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus{
-    box-shadow: none;
-  }
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+  box-shadow: none;
+}
 
-  @media only screen and (max-width: 725px) {
-    .custom-btn{
-      width: 100%;
-    }
+@media only screen and (max-width: 725px) {
+  .custom-btn {
+    width: 100%;
   }
+}
+
+.emailValidationmessage {
+  color: #00c50a;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.emailValidationmessage.statusError {
+  color: #b30303;
+}

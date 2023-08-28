@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
 import { useTranslation } from "react-i18next";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
   const { t } = useTranslation("global");
@@ -67,62 +68,99 @@ const ContactForm = () => {
         message: "",
       });
 
-      console.log(formData); // You can replace this with your desired form submission logic
+      // Send email using emailjs
+      const emailData = {
+        to_name: "Intaro.ro", // Replace with recipient's name
+        from_name: formData.firstName + " " + formData.lastName,
+        from_email: formData.email,
+        phone_number: formData.phoneNumber,
+        subject: formData.subject,
+        message: formData.message,
+      };
 
-      // Clear form inputs
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneNumber: "",
-        subject: "",
-        message: "",
-      });
+      emailjs
+        .send(
+          "service_zj8cj3s",
+          "template_elpjxxd",
+          emailData,
+          "IyE2K0EVX7mtrRSs6"
+        )
+        .then(
+          (result) => {
+            const emailValidationMessage = document.getElementById("emailValidationmessage");
+            emailValidationMessage.innerText = "Email successfully sent!"
+            // Perform additional actions after successful email sending
+            // For example, clear form inputs
+            setFormData({
+              firstName: "",
+              lastName: "",
+              email: "",
+              phoneNumber: "",
+              subject: "",
+              message: "",
+            });
+          },
+          (error) => {
+            const emailValidationMessage = document.getElementById("emailValidationmessage");
+            emailValidationMessage.innerText = "Email not send!"
+            emailValidationMessage.classList.add("statusError");
+            // Handle errors if the email sending fails
+          }
+        );
     }
   };
 
-
   return (
     <div className="container mt-3">
-    <h2>{t("Contact.Text01")}</h2>
-    <form onSubmit={handleSubmit} noValidate>
-      <div className="">
-        {/* <label htmlFor="firstName" className="form-label">
+      <h2>{t("Contact.Text01")}</h2>
+      <form onSubmit={handleSubmit} noValidate>
+        <div className="">
+          {/* <label htmlFor="firstName" className="form-label">
          
         </label> */}
-        <input
-          type="text"
-          className={`form-control custom-input mt-3 ${errors.firstName && "is-invalid"}`}
-          id="firstName"
-          name="firstName"
-          value={formData.firstName}
-          placeholder={t("Contact.Text02")}
-          onChange={handleChange}
-        />
-        {errors.firstName && <div className="custom-error">{errors.firstName}</div>}
-      </div>
-      <div className="">
-        {/* <label htmlFor="lastName" className="form-label">
+          <input
+            type="text"
+            className={`form-control custom-input mt-3 ${
+              errors.firstName && "is-invalid"
+            }`}
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            placeholder={t("Contact.Text02")}
+            onChange={handleChange}
+          />
+          {errors.firstName && (
+            <div className="custom-error">{errors.firstName}</div>
+          )}
+        </div>
+        <div className="">
+          {/* <label htmlFor="lastName" className="form-label">
          
         </label> */}
-        <input
-          type="text"
-          className={`form-control custom-input mt-3 ${errors.lastName && "is-invalid"}`}
-          id="lastName"
-          name="lastName"
-          value={formData.lastName}
-          placeholder={t("Contact.Text03")}
-          onChange={handleChange}
-        />
-        {errors.lastName && <div className="custom-error">{errors.lastName}</div>}
-      </div>
+          <input
+            type="text"
+            className={`form-control custom-input mt-3 ${
+              errors.lastName && "is-invalid"
+            }`}
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            placeholder={t("Contact.Text03")}
+            onChange={handleChange}
+          />
+          {errors.lastName && (
+            <div className="custom-error">{errors.lastName}</div>
+          )}
+        </div>
         <div className="">
           {/* <label htmlFor="email" className="form-label">
           
           </label> */}
           <input
             type="email"
-            className={`form-control  custom-input mt-3 ${errors.email && "is-invalid"}`}
+            className={`form-control  custom-input mt-3 ${
+              errors.email && "is-invalid"
+            }`}
             id="email"
             name="email"
             value={formData.email}
@@ -138,7 +176,9 @@ const ContactForm = () => {
           </label> */}
           <input
             type="tel"
-            className={`form-control custom-input mt-3 ${errors.phoneNumber && "is-invalid"}`}
+            className={`form-control custom-input mt-3 ${
+              errors.phoneNumber && "is-invalid"
+            }`}
             id="phoneNumber"
             name="phoneNumber"
             pattern="[0-9]"
@@ -147,14 +187,18 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-          {errors.phoneNumber && <div className="custom-error">{errors.phoneNumber}</div>}
+          {errors.phoneNumber && (
+            <div className="custom-error">{errors.phoneNumber}</div>
+          )}
         </div>
         <div className="">
           {/* <label htmlFor="subject" className="form-label">
             
           </label> */}
           <select
-            className={`form-select custom-input mt-3 ${errors.subject && "is-invalid"}`}
+            className={`form-select custom-input mt-3 ${
+              errors.subject && "is-invalid"
+            }`}
             id="subject"
             name="subject"
             value={formData.subject}
@@ -168,14 +212,18 @@ const ContactForm = () => {
             <option value="Feedback">Feedback</option>
             <option value="Other">Other</option>
           </select>
-          {errors.subject && <div className="custom-error">{errors.subject}</div>}
+          {errors.subject && (
+            <div className="custom-error">{errors.subject}</div>
+          )}
         </div>
         <div className="">
           {/* <label htmlFor="message" className="form-label">
            
           </label> */}
           <textarea
-            className={`form-control custom-input mt-3 ${errors.message && "is-invalid"}`}
+            className={`form-control custom-input mt-3 ${
+              errors.message && "is-invalid"
+            }`}
             id="message"
             name="message"
             rows="4"
@@ -184,11 +232,16 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           ></textarea>
-          {errors.message && <div className="custom-error">{errors.message}</div>}
+          {errors.message && (
+            <div className="custom-error">{errors.message}</div>
+          )}
         </div>
+        <span>
         <button type="submit" className="custom-btn">
-        {t("Contact.Text08")}
+          {t("Contact.Text08")}
         </button>
+        <span className="emailValidationmessage" id="emailValidationmessage"></span>
+        </span>        
       </form>
     </div>
   );
