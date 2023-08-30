@@ -79,7 +79,6 @@ const VerificationCodeGenerator = ({
         New Code
       </button>
       <div className="ToBeTypeCode">{verificationCode}</div>
-
       <input
         type="text"
         placeholder="Enter verification code"

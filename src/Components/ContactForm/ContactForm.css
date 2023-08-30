@@ -126,13 +126,17 @@ textarea:focus.custom-input {
 
 .verification-code .custom-input {
   width: 100%;
-}
-
-.verification-code .custom-input {
   text-align: center;
 }
 
-@media only screen and (max-width: 725px) {
+
+@media only screen and (max-width: 980px) {
+  .verification-code .custom-input {
+  font-size:12px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
   .verification-code {
     flex-wrap: wrap;
     justify-content: center;
