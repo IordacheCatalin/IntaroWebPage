@@ -3,8 +3,13 @@ import "./ContactForm.css";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 
+import VerificationCodeGenerator from "./VerificationCodeGenerator";
+
 const ContactForm = () => {
   const { t } = useTranslation("global");
+  const [generatedVerificationCode, setGeneratedVerificationCode] =
+    useState("");
+  const [isCodeVerified, setIsCodeVerified] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,6 +38,25 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log("Submit");
+
+    // Verify the verification code
+    if (!isCodeVerified) {
+      const emailValidationMessage = document.getElementById(
+        "emailValidationmessage"
+      );
+      emailValidationMessage.innerText = "Please enter the verification code.";
+      emailValidationMessage.classList.add("statusError");
+      return; // Prevent further submission
+    }
+
+    // Clear any previous error messages
+    const emailValidationMessage = document.getElementById(
+      "emailValidationmessage"
+    );
+    
+    emailValidationMessage.innerText = "";
 
     // Validate form fields
     const newErrors = {};
@@ -66,6 +90,7 @@ const ContactForm = () => {
         phoneNumber: "",
         subject: "",
         message: "",
+        verificationCode: "",
       });
 
       // Send email using emailjs
@@ -87,8 +112,10 @@ const ContactForm = () => {
         )
         .then(
           (result) => {
-            const emailValidationMessage = document.getElementById("emailValidationmessage");
-            emailValidationMessage.innerText = "Email successfully sent!"
+            const emailValidationMessage = document.getElementById(
+              "emailValidationmessage"
+            );
+            emailValidationMessage.innerText = "Email successfully sent!";
             // Perform additional actions after successful email sending
             // For example, clear form inputs
             setFormData({
@@ -101,13 +128,24 @@ const ContactForm = () => {
             });
           },
           (error) => {
-            const emailValidationMessage = document.getElementById("emailValidationmessage");
-            emailValidationMessage.innerText = "Email not send!"
+            const emailValidationMessage = document.getElementById(
+              "emailValidationmessage"
+            );
+            emailValidationMessage.innerText = "Email not send!";
             emailValidationMessage.classList.add("statusError");
             // Handle errors if the email sending fails
           }
         );
     }
+  };
+
+  const handleVerificationCodeUpdate = (code) => {
+    setGeneratedVerificationCode(code);
+    setIsCodeVerified(false); // Reset the verification status when code changes
+  };
+
+  const handleVerificationStatusChange = (status) => {
+    setIsCodeVerified(status);
   };
 
   return (
@@ -236,12 +274,20 @@ const ContactForm = () => {
             <div className="custom-error">{errors.message}</div>
           )}
         </div>
+        <VerificationCodeGenerator
+          onUpdate={handleVerificationCodeUpdate}
+          onVerificationStatusChange={handleVerificationStatusChange}
+          isCodeVerified={isCodeVerified}
+        />
         <span>
-        <button type="submit" className="custom-btn">
-          {t("Contact.Text08")}
-        </button>
-        <span className="emailValidationmessage" id="emailValidationmessage"></span>
-        </span>        
+          <button type="submit" className="custom-btn">
+            {t("Contact.Text08")}
+          </button>
+          <span
+            className="emailValidationmessage"
+            id="emailValidationmessage"
+          ></span>
+        </span>
       </form>
     </div>
   );

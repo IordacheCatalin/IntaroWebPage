@@ -55,7 +55,7 @@ textarea:focus.custom-input {
 }
 
 .custom-btn {
-  width: 125px;
+  min-width: 125px;
   height: 36px;
   font-size: 16px;
   font-weight: 600;
@@ -94,7 +94,7 @@ textarea:focus.custom-input {
   }
 }
 
-.emailValidationmessage {
+.emailValidationmessage, .emailValidationmessage.statusOk  {
   color: #00c50a;
   padding: 10px;
   font-size: 16px;
@@ -103,4 +103,38 @@ textarea:focus.custom-input {
 
 .emailValidationmessage.statusError {
   color: #b30303;
+}
+
+/* Verification Area */
+.verification-code {
+  display: flex;
+  padding: 20px 0px 0px 0px;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.ToBeTypeCode {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+}
+.custom-btn.verificationBtn {
+  background: #f3c855 0% 0% no-repeat padding-box;
+  margin-top: 0px;
+}
+
+.verification-code .custom-input {
+  width: 100%;
+}
+
+.verification-code .custom-input {
+  text-align: center;
+}
+
+@media only screen and (max-width: 725px) {
+  .verification-code {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
