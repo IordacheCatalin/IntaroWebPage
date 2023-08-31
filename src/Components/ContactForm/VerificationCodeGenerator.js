@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./ContactForm.css";
 
+import { ReactComponent as RefreshBtn } from "../../Assets/refresh.svg";
+import { ReactComponent as RefreshBtnHover } from "../../Assets/refreshOnHover.svg";
+
 const VerificationCodeGenerator = ({
   onUpdate,
   onVerificationStatusChange,
@@ -9,6 +12,7 @@ const VerificationCodeGenerator = ({
   const [verificationCode, setVerificationCode] = useState("");
   const [userEnteredCode, setUserEnteredCode] = useState("");
   const [verificationStatus, setVerificationStatus] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     generateVerificationCode();
@@ -69,15 +73,24 @@ const VerificationCodeGenerator = ({
     }
   };
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <div className="verification-code">
-      <button
-        type="button"
-        className="custom-btn verificationBtn"
+      <div
         onClick={generateVerificationCode}
+        className="verificationBtn"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        New Code
-      </button>
+        {isHovered ? <RefreshBtnHover /> : <RefreshBtn />}
+      </div>
       <div className="ToBeTypeCode">{verificationCode}</div>
       <input
         type="text"

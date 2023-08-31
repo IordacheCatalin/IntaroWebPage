@@ -23,12 +23,12 @@ i18next.init({
   },
 });
 
-// Check if the protocol is HTTP, and if so, redirect to HTTPS
-if (window.location.protocol === "http:") {
-  window.location.href = `https:${window.location.href.substring(
-    window.location.protocol.length
-  )}`;
-} else {
+// // Check if the protocol is HTTP, and if so, redirect to HTTPS
+// if (window.location.protocol === "http:") {
+//   window.location.href = `https:${window.location.href.substring(
+//     window.location.protocol.length
+//   )}`;
+// } else {
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(
     <React.StrictMode>
@@ -39,4 +39,4 @@ if (window.location.protocol === "http:") {
   );
 
   reportWebVitals();
-}
+// }
